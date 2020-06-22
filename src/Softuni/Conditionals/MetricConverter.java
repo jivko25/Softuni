@@ -6,8 +6,8 @@ public class MetricConverter {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		double number = sc.nextDouble();
-		String textIn = sc.nextLine();
-		String textOut = sc.nextLine();
+		String textIn = sc.next();
+		String textOut = sc.next();
 		if(textIn == "mm") {
 			if(textOut == "cm") {
 				System.out.print(number/10);
