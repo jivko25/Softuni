@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Trip {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
-		int budget;
+		double budget;
 		do {
-			budget = sc.nextInt();
+			budget = sc.nextDouble();
 		}
 		while(budget<10 || budget>5000);
 		String season = sc.next();
@@ -25,7 +25,7 @@ public class Trip {
 			}
 			else if(budget > 1000) {
 				System.out.println("Somewhere in Europe");
-				System.out.println("Hotel - ");
+				System.out.print("Hotel - ");
 				System.out.format("%.2f", budget*0.9);
 			}
 			break;
@@ -42,7 +42,7 @@ public class Trip {
 			}
 			else if(budget > 1000) {
 				System.out.println("Somewhere in Europe");
-				System.out.println("Hotel - ");
+				System.out.print("Hotel - ");
 				System.out.format("%.2f", budget*0.9);
 			}
 			break;	
