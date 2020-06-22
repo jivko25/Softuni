@@ -44,7 +44,7 @@ public class NewHome {
 			break;	
 		case "Narcissus":
 			if(flowers<120) {
-				sum = flowers*3*0.85;
+				sum = flowers*3*1.15;
 			}
 			else {
 				sum = flowers*3;
@@ -52,8 +52,7 @@ public class NewHome {
 			break;	
 		case "Gladiolus":
 			if(flowers<80) {
-				sum = flowers*2.5*0.8;
-			}
+				sum = flowers*2.5*1.2;			}
 			else {
 				sum = flowers*2.5;
 			}
@@ -63,13 +62,13 @@ public class NewHome {
 			System.out.println("Mistake!");
 			break;
 		}
-		if(budget>sum) {
+		if(budget>=sum) {
 			System.out.print("Hey, you have a great garden with " + flowers + " " + typeFlowers + " and ");
 			System.out.format("%.2f", budget - sum);
 			System.out.print(" leva left.");
 //			System.out.printf("Hey, you have a great garden with %d %s and %f leva left.", flowers, typeFlowers, budget-sum);
 		}
-		else {
+		else if(budget<sum) {
 			System.out.print("Not enough money, you need ");
 			System.out.format("%.2f", sum-budget);
 			System.out.print(" leva more.");
