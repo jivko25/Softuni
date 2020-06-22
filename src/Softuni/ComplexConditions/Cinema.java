@@ -1,4 +1,4 @@
-package ComplexCondidions;
+package Softuni.ComplexConditions;
 
 import java.util.Scanner;
 
