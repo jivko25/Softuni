@@ -41,13 +41,13 @@ public class FishingBoat {
 		}
 			else if(fishermans<=11 && season!="Autumn") {
 			boatPrice = boatPrice*0.85;
-			if(fishermans%2 == 0) {
+			if(fishermans%2 == 0 && season.equals("Autumn")!= true) {
 				boatPrice = boatPrice*0.95;
 			}
 		}
 			else if(fishermans<=16 && season!="Autumn") {
 			boatPrice = boatPrice*0.75;
-			if(fishermans%2 == 0) {
+			if(fishermans%2 == 0 && season.equals("Autumn")!= true) {
 				boatPrice = boatPrice*0.95;
 			}
 		}
