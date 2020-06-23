@@ -50,14 +50,13 @@ public class OperationsBetweenNumbers {
 				System.out.printf("Cannot divide %d by zero", firstNumber);
 			}
 			else {
-				double res = firstNumber/secondNumber;
 				if((firstNumber/secondNumber)%2==0) {
 					isEven = "even";
 				}
 				else {
 					isEven = "odd";
 				}
-				System.out.printf("%d / %d = %f - %s", firstNumber, secondNumber, res, isEven);
+				System.out.printf("%d / %d = %d - %s", firstNumber, secondNumber, firstNumber / secondNumber, isEven);
 			}
 
 			break;
