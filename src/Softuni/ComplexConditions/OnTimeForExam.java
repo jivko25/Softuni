@@ -57,7 +57,6 @@ public class OnTimeForExam {
 			}
 		}
 		else if(timeE-time <0) {
-			System.out.println((time-timeE)/60);
 			if((time-timeE)/60<1) {
 			System.out.printf("Late \n%d minutes after the start",(time-timeE)%60);
 			}
