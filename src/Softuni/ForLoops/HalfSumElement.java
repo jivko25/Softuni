@@ -1,4 +1,4 @@
-package Softuni.ForCycles;
+package Softuni.ForLoops;
 
 import java.util.Scanner;
 

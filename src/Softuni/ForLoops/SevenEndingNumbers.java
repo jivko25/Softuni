@@ -1,4 +1,4 @@
-package Softuni.ForCycles;
+package Softuni.ForLoops;
 
 public class SevenEndingNumbers {
 	public static void main(String [] args) {
