@@ -1,4 +1,4 @@
-package Softuni.Algorithms.RecursionAndBackTracking;
+package Softuni.Fundamentals.ObjectsAndClasses;
 
 import java.util.ArrayList;
 import java.util.List;
