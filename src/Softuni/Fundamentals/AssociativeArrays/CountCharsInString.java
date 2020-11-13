@@ -18,6 +18,7 @@ public class CountCharsInString {
 			chars.put(arr[i], chars.get(arr[i])+ 1);
 		}
 		}
+		chars.remove(" ");
 		for (String n : chars.keySet()) {
 			String key = n.toString();
             String value = chars.get(n).toString();  
