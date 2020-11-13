@@ -8,7 +8,8 @@ public class MinerTask {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		boolean isStop = false;
-		Map<String, Integer> craft = new HashMap<>();
+//		Map<String, Integer> craft = new HashMap<>();
+		HashMap<String, Integer> craft = new HashMap<String, Integer>();
 		while(isStop == false) {
 			String item = sc.nextLine();
 			if("stop".equals(item)) {
