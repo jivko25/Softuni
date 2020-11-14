@@ -1,6 +1,7 @@
 package Softuni.Fundamentals.AssociativeArrays;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -8,8 +9,8 @@ public class MinerTask {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		boolean isStop = false;
-//		Map<String, Integer> craft = new HashMap<>();
-		HashMap<String, Integer> craft = new HashMap<String, Integer>();
+		Map<String, Integer> craft = new LinkedHashMap<>();
+//		HashMap<String, Integer> craft = new HashMap<String, Integer>();
 		while(isStop == false) {
 			String item = sc.nextLine();
 			if("stop".equals(item)) {
@@ -24,8 +25,8 @@ public class MinerTask {
 				craft.put(item, craft.get(item) + quality);
 			}
 		}
-		for(String n : craft.keySet()) {
-			System.out.printf("%s -> %d\n",n,craft.get(n));
+		for(Map.Entry<String, Integer> entry : craft.entrySet()) {
+			System.out.printf("%s -> %d\n",entry.getKey(),entry.getValue());
 		}
 	}
 }

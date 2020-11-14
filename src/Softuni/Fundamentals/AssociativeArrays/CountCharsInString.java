@@ -1,6 +1,7 @@
 package Softuni.Fundamentals.AssociativeArrays;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class CountCharsInString {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		String word = sc.nextLine();
-		Map<String, Integer> chars = new HashMap<>();
+		Map<String, Integer> chars = new LinkedHashMap<>();
 		String [] arr = word.split("");
 		for(int i = 0;i<arr.length;i++) {
 		if(chars.get(arr[i]) == null) {
