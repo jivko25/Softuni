@@ -11,13 +11,16 @@ public class LegendaryFarming {
 		boolean isReady = false;
 		while(isReady == false) {
 			String input = sc.nextLine();
+			if("stop".equals(input)) {
+				break;
+			}
 			String [] arr = input.split(" ");
 			for(int i = 0;i<arr.length;i=i+2) {
-				if(materials.get(arr[i].toLowerCase()) == null) {
-					materials.put(arr[i].toLowerCase(), Integer.parseInt(arr[i+1]));
+				if(materials.get(arr[i+1].toLowerCase()) == null) {
+					materials.put(arr[i+1].toLowerCase(), Integer.parseInt(arr[i]));
 				}
 				else {
-					materials.put(arr[i].toLowerCase(), materials.get(arr[i].toLowerCase()) + Integer.parseInt(arr[i+1]));
+					materials.put(arr[i+1].toLowerCase(), materials.get(arr[i+1].toLowerCase()) + Integer.parseInt(arr[i]));
 				}
 			}
 			if(materials.get("shards") != null) {
@@ -31,7 +34,7 @@ public class LegendaryFarming {
 				break;
 				}
 			}
-			else if(materials.get("fragments") != null) {
+			if(materials.get("fragments") != null) {
 				if(materials.get("fragments") >= 250) {
 				System.out.println("Valanyr obtained!");
 				materials.put("fragments", materials.get("fragments") - 250);
@@ -42,7 +45,7 @@ public class LegendaryFarming {
 				break;
 				}
 			}
-			else if(materials.get("motes") != null) {
+			if(materials.get("motes") != null) {
 				if(materials.get("motes") >= 250) {
 				System.out.println("Dragonwrath obtained!");
 				materials.put("motes", materials.get("motes") - 250);
