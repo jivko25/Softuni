@@ -22,14 +22,14 @@ public class LegendaryFarming {
 				else {
 					materials.put(arr[i+1].toLowerCase(), materials.get(arr[i+1].toLowerCase()) + Integer.parseInt(arr[i]));
 				}
-			}
+			
 			if(materials.get("shards") != null) {
 				if(materials.get("shards") >= 250) {
 				System.out.println("Shadowmourne obtained!");
 				materials.put("shards", materials.get("shards") - 250);
-				if(materials.get("shards") == 0) {
-					materials.remove("shards");
-				}
+//				if(materials.get("shards") == 0) {
+//					materials.remove("shards");
+//				}
 				isReady = true;
 				break;
 				}
@@ -38,9 +38,9 @@ public class LegendaryFarming {
 				if(materials.get("fragments") >= 250) {
 				System.out.println("Valanyr obtained!");
 				materials.put("fragments", materials.get("fragments") - 250);
-				if(materials.get("fragments") == 0) {
-					materials.remove("fragments");
-				}
+//				if(materials.get("fragments") == 0) {
+//					materials.remove("fragments");
+//				}
 				isReady = true;
 				break;
 				}
@@ -49,12 +49,13 @@ public class LegendaryFarming {
 				if(materials.get("motes") >= 250) {
 				System.out.println("Dragonwrath obtained!");
 				materials.put("motes", materials.get("motes") - 250);
-				if(materials.get("motes") == 0) {
-					materials.remove("motes");
-				}
+//				if(materials.get("motes") == 0) {
+//					materials.remove("motes");
+//				}
 				isReady = true;
 				break;
 				}
+			}
 			}
 		}
 		for(String n : materials.keySet()) {
