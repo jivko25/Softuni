@@ -22,8 +22,9 @@ public class SoftUniParking {
 				}
 			}
 			else if("unregister".equals(arr[0])) {
-				if(ParkingPlaces.get(arr[1]) == null) {
+				if(ParkingPlaces.get(arr[1]) != null) {
 					ParkingPlaces.remove(arr[1]);
+					System.out.printf("%s unregistered successfully\n",arr[1]);
 				}
 				else {
 					System.out.printf("ERROR: user %s not found\n",arr[1]);
@@ -31,7 +32,7 @@ public class SoftUniParking {
 			}
 		}
 		for(String k : ParkingPlaces.keySet()) {
-			System.out.printf("%s -> %s\n",k, ParkingPlaces.get(k));
+			System.out.printf("%s => %s\n",k, ParkingPlaces.get(k));
 		}
 	}
 }
