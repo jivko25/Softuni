@@ -25,7 +25,7 @@ public class StudentAcademy {
 		}
 		grades.entrySet().stream()
 		.filter(e -> e.getValue()/counter.get(e.getKey()) >= 4.5 )
-		.sorted((a,b) -> Double.compare(a.getValue()/counter.get(a.getKey()),b.getValue()/counter.get(b.getKey())))
-		.forEach(d -> System.out.printf("%s -> %.2f",d.getKey(),d.getValue()/counter.get(d.getKey())));;
+		.sorted((a,b) -> Double.compare(b.getValue()/counter.get(b.getKey()),a.getValue()/counter.get(a.getKey())))
+		.forEach(d -> System.out.printf("%s -> %.2f\n",d.getKey(),d.getValue()/counter.get(d.getKey())));;
 	}
 }
