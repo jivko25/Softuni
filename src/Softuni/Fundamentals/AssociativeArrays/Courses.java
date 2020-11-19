@@ -39,6 +39,23 @@ public class Courses {
 //					}
 //				}
 //		}
-		CoursesQuantity.entrySet().stream().sorted((f,s) -> f.getValue().compareTo(s.getValue())).forEach(System.out.printf("%s: %d\n",CoursesQuantity.keySet(), CoursesQuantity.get(CoursesQuantity.keySet())));;
+//		CoursesPeople.entrySet().stream().sorted((o1,o2) -> o2.getValue().compareTo(o1.getValue()));
+//		System.out.println(CoursesPeople);
+		CoursesQuantity.entrySet().stream().
+		sorted(( o1,o2) -> Integer.compare(o2.getValue(),o1.getValue())).forEach(
+				p -> 
+				{
+					System.out.printf("%s: %d\n",p.getKey(),p.getValue());
+					CoursesPeople.entrySet().stream().filter(a -> a.getValue().equalsIgnoreCase(p.getKey())).sorted((o1,o2) -> o2.getValue().compareTo(o1.getValue())).forEach(g -> System.out.printf("-- %s\n",g.getKey()));;
+//					for(String s : CoursesPeople.keySet()) 
+//					{
+//						if(CoursesPeople.get(s).equals(p.getKey()))
+//						{
+//							System.out.printf("-- %s\n",s);
+//						}
+//				
+//					}
+				}
+				);
 	}
 }
