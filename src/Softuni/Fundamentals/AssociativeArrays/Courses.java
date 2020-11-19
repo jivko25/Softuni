@@ -29,32 +29,14 @@ public class Courses {
 				}
 		}
 		
-//		for(String n : CoursesQuantity.keySet())
-//		{
-//			System.out.printf("%s: %d\n",n, CoursesQuantity.get(n));
-//				for(String k : CoursesPeople.keySet()) 
-//				{
-//					if(n.equals(CoursesPeople.get(k))) {
-//						System.out.printf("-- %s\n",k);
-//					}
-//				}
-//		}
-//		CoursesPeople.entrySet().stream().sorted((o1,o2) -> o2.getValue().compareTo(o1.getValue()));
-//		System.out.println(CoursesPeople);
 		CoursesQuantity.entrySet().stream().
 		sorted(( o1,o2) -> Integer.compare(o2.getValue(),o1.getValue())).forEach(
 				p -> 
 				{
 					System.out.printf("%s: %d\n",p.getKey(),p.getValue());
-					CoursesPeople.entrySet().stream().filter(a -> a.getValue().equalsIgnoreCase(p.getKey())).sorted((o1,o2) -> o2.getValue().compareTo(o1.getValue())).forEach(g -> System.out.printf("-- %s\n",g.getKey()));;
-//					for(String s : CoursesPeople.keySet()) 
-//					{
-//						if(CoursesPeople.get(s).equals(p.getKey()))
-//						{
-//							System.out.printf("-- %s\n",s);
-//						}
-//				
-//					}
+					CoursesPeople.entrySet().stream().filter(a -> a.getValue().equalsIgnoreCase(p.getKey()))
+					.sorted((o1,o2) -> o2.getValue().compareTo(o1.getValue()))
+					.forEach(g -> System.out.printf("-- %s\n",g.getKey()));;
 				}
 				);
 	}
