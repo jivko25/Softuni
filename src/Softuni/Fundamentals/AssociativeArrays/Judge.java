@@ -19,18 +19,22 @@ public class Judge {
 			if(counter.get(arr[1]) == null) {
 				HashMap<String, String> res = new HashMap<String, String>();
 				counter.put(arr[1],1);
+				if(res.get(arr[0]) == null) {
 				res.put(arr[0], arr[2]);
 				if(points.get(arr[0]) == null) {
 					points.put(arr[0], Integer.parseInt(arr[2]));
 				}
 				else {
 					points.put(arr[0], points.get(arr[0]) + Integer.parseInt(arr[2]));
+				}
 				}
 				contests.put(arr[1], res);
 			}
 			else {
 				HashMap<String, String> res = contests.get(arr[1]);
+				if(res.get(arr[0]) == null) {
 				counter.put(arr[1], counter.get(arr[1]) + 1);
+				
 				res.put(arr[0], arr[2]);
 				if(points.get(arr[0]) == null) {
 					points.put(arr[0], Integer.parseInt(arr[2]));
@@ -38,6 +42,9 @@ public class Judge {
 				else {
 					points.put(arr[0], points.get(arr[0]) + Integer.parseInt(arr[2]));
 				}
+				}
+				contests.put(arr[1], res);
+				
 			}
 		}
 		contests.entrySet().stream()
