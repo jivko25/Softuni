@@ -35,9 +35,11 @@ public class Ranking {
 				}
 				else {
 					HashMap<String, Integer> res = participants.get(arr[2]);
+					if(res.get(arr[0]) == null) {
 					res.put(arr[0], Integer.parseInt(arr[3]));
 //					res.entrySet().stream().sorted((a,b) -> Integer.compare(b.getValue(), a.getValue()));
 					participants.put(arr[2], res);
+					}
 				}
 			}
 		}
