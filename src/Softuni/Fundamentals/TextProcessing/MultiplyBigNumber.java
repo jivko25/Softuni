@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MultiplyBigNumber {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
-		String a = sc.nextLine();
+		String a = sc.nextLine().replaceFirst("^0+", "");
 		int b = Integer.parseInt(sc.nextLine());
 		StringBuilder sb = new StringBuilder();
 		int carry = 0;
