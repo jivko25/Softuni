@@ -21,19 +21,30 @@ public class CompanyUsers2 {
 			}
 			else {
 				ArrayList<String> inputList = new ArrayList<String>();
-				inputList = users.get(arr[0]);
-				inputList.add(arr[1]);
-				users.put(arr[0], inputList);
+				for(int i = 0;i<users.get(arr[0]).size();i++) {
+					if(users.get(arr[0]).get(i).equalsIgnoreCase(arr[1])) {
+						break;
+					}
+					else {
+						inputList = users.get(arr[0]);
+						inputList.add(arr[1]);
+						users.put(arr[0], inputList);
+					}
+				}
+//				inputList = users.get(arr[0]);
+//				inputList.add(arr[1]);
+//				users.put(arr[0], inputList);
 			}
 		}
 		users.entrySet().stream()
 		.sorted((a,b) -> a.getKey().compareTo(b.getKey()))
 		.forEach(e -> {
 			System.out.println(e.getKey());
+			e.getValue().stream().sorted((m,n) -> m.compareTo(n)).forEach(l -> System.out.printf("-- %s\n",l));;
 //			users.entrySet().stream().forEach(k -> {
-				for(int i = 0;i<e.getValue().size();i++) {
-					System.out.printf("--%s\n",e.getValue().get(i));
-				}
+//				for(int i = 0;i<e.getValue().size();i++) {
+//					System.out.printf("-- %s\n",e.getValue().get(i));
+//				}
 //			});
 		});
 	}
