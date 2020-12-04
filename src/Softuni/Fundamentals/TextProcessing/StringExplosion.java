@@ -1,38 +1,34 @@
 package Softuni.Fundamentals.TextProcessing;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class StringExplosion {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		StringBuilder sb = new StringBuilder(sc.nextLine());
-		List <Integer> list = new ArrayList<>();
+		int tt = sb.charAt(0) -48;
 		for(int i = 0;i<sb.length();i++) {
-			int explosionPower = 0;
 			if(sb.charAt(i) == '>') {
-				int val = sb.charAt(i+1);
-				explosionPower = sb.charAt(i+1);
-				for(int k = i+1;k<sb.length();k++) {
-					if(sb.charAt(k) == '>') {
-						val = sb.charAt(k+1);
-						explosionPower += val;
+				int detonation = sb.charAt(i+1) - 48;
+				for(int k = 0;k<detonation;k++) {
+					if((i+k) >= sb.length()-1) {
+						break;
+					}
+					else if(Character.isDigit(sb.charAt(i+k))) {
+						int bonus = sb.charAt(i+k) - 48;
+						sb.deleteCharAt(i+k);
+						detonation += bonus;
+					}
+					else if(sb.charAt(i+k) == '>') {
+						k-=1;
+						continue;
 					}
 					else {
-						list.add(k);
-						sb.delete(k-1, k);
+						sb.deleteCharAt(i+k);
 					}
 				}
 			}
 		}
-//		for(int i = 0;i<sb.length();i++) {
-//			for(int k = 0;k<list.size();k++) {
-//				if(sb.charAt(i) == list.get(k)) {
-//					sb.deleteCharAt(list.get(k));
-//				}
-//			}
-//		}
 		System.out.println(sb);
 	}
 }
