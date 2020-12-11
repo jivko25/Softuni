@@ -38,12 +38,10 @@ public class Race {
 		int [] n = {0};
 		participiants.entrySet().stream()
 		.sorted((a,b) -> Integer.compare(b.getValue(),a.getValue()))
+		.limit(3)
 		.forEach(e -> {
 			System.out.printf("%s place: %s\n",places[n[0]],e.getKey());
 			n[0]++;
-			if(n[0]==2) {
-				return;
-			}
 		});;
 	}
 }
