@@ -6,7 +6,6 @@ public class Task1 {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
-		StringBuilder sb = new StringBuilder(str);
 		String input = sc.nextLine();
 		while(!"Done".equals(input)) {
 			String [] arr = input.split(" ");
