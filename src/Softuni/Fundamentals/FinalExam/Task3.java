@@ -9,6 +9,7 @@ public class Task3 {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine();
+		int count = 0;
 		Map<String, Integer> health = new LinkedHashMap<>();
 		Map<String, Integer> energy = new LinkedHashMap<>();
 		while(!"Results".equals(input)) {
@@ -23,7 +24,6 @@ public class Task3 {
 					health.put(arr[1], health.get(arr[1]) + Integer.parseInt(arr[2]));
 //					energy.put(arr[1], energy.get(arr[1]) + Integer.parseInt(arr[3]));
 				}
-				System.out.println("done");
 				break;
 			case "Attack":
 				if(health.get(arr[1]) != null && health.get(arr[2]) != null) {
@@ -33,12 +33,12 @@ public class Task3 {
 					else {
 						health.remove(arr[2]);
 						energy.remove(arr[2]);
-						System.out.printf("%s was disqualified!",arr[2]);
+						System.out.printf("%s was disqualified!\n",arr[2]);
 					}
 					if((energy.get(arr[1]) - 1) <= 0) {
 						health.remove(arr[1]);
 						energy.remove(arr[1]);
-						System.out.printf("%s was disqualified!",arr[1]);
+						System.out.printf("%s was disqualified!\n",arr[1]);
 					}
 					else {
 						energy.put(arr[1], energy.get(arr[1]) - 1);
@@ -61,10 +61,14 @@ public class Task3 {
 			}
 			input = sc.nextLine();
 		}
+		for(String s : health.keySet()) {
+			count++;
+		}
+		System.out.printf("People count: %d\n", count);
 		health.entrySet().stream()
-		.sorted((a,b) -> Integer.compare(a.getValue(), b.getValue()))
+		.sorted((a,b) -> Integer.compare(b.getValue(), a.getValue()))
 		.forEach(e -> {
-			System.out.printf("%s - %d - %d", e.getKey(),e.getValue(),energy.get(e.getKey()));
+			System.out.printf("%s - %d - %d\n", e.getKey(),e.getValue(),energy.get(e.getKey()));
 		});;
 	}
 }
