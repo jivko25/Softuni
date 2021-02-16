@@ -23,7 +23,7 @@ public class FillTheMatrix {
 		for(int y = 0;y<size;y++) {
 			for(int x = 0;x<size;x++) {
 				if(arr[x][y] < 10) {
-					System.out.print(arr[x][y] + "  ");
+					System.out.print(arr[x][y] + " ");
 				}
 				else {
 					System.out.print(arr[x][y] + " ");
