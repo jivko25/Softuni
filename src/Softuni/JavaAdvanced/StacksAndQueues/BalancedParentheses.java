@@ -22,8 +22,6 @@ public class BalancedParentheses {
 			left.offer(input[i]);
 			right.push(input[i]);
 		}
-//		System.out.println(left.poll());
-//		System.out.println(right.pop());
 		while(!left.isEmpty()) {
 			if(!closingChar.get(left.poll()).equals(right.pop())) {
 				check = false;
@@ -35,8 +33,5 @@ public class BalancedParentheses {
 		else {
 			System.out.println("NO");
 		}
-//		while(!deque.isEmpty()) {
-//			System.out.print(deque.poll());
-//		}
 	}
 }
