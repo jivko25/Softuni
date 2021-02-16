@@ -28,6 +28,9 @@ public class BasicStackOperations {
 			stack.pop();
 		}
 		if(!isStackContainElement) {
+			if(min == 5000000) {
+				min = 0;
+			}
 			System.out.println(min);
 		}
 	}

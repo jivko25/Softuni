@@ -1,53 +1,51 @@
 package Softuni.JavaAdvanced.StacksAndQueues;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class MaximumElement {
-	public static void main(String [] args) {
+	public static void main(String [] ars) {
 		Scanner sc = new Scanner(System.in);
-		int n = Integer.parseInt(sc.nextLine());
-		Stack<Integer> stack = new Stack<>();
-		Stack<Integer> tempStack = new Stack<>();
-		int max = 0;
-		for(int i = 0;i<n;i++) {
-			String [] input = sc.nextLine().split(" ");
-			switch (input[0]) {
+		ArrayDeque<Integer> stack= new ArrayDeque<>();
+		int numberOfCommands = Integer.parseInt(sc.nextLine());
+		for(int i = 0;i<numberOfCommands;i++) {
+			String command = sc.nextLine();
+			String [] arr = command.split("\\s+");
+			switch (arr[0]) {
 			case "1":
-				stack.push(Integer.parseInt(input[1]));
-				if(Integer.parseInt(input[1]) >max) {
-					max = Integer.parseInt(input[1]);
-				}
+				stack.push(Integer.parseInt(arr[1]));
 				break;
 			case "2":
-				if(stack.size() == 0) {
-					
-				}
-				else {
+				if(!stack.isEmpty()) {
 				stack.pop();
 				}
 				break;
 			case "3":
-				if(stack.size() == 0) {
-					System.out.println(0);
-				}
-//				else {
-//				int max = 0;
-//				for(int k = 0;0<tempStack.size();k++) {
-//					if(tempStack.peek()>max) {
-//						max = tempStack.pop();
-//					}
-//					else {
-//						tempStack.pop();
-//					}
-//					System.out.println(stack);
-//				}
-					System.out.println(max);
-//				}
+//				int max = findMaxElement(stack);
+				int max = Collections.max(stack);
+				System.out.println(max);
 				break;
 
 			default:
 				break;
 			}
 		}
+//		while(!stack.isEmpty()) {
+//			System.out.println(stack.pop());
+//		}
+	}
+	
+	public static int findMaxElement(ArrayDeque<Integer> stack) {
+		int max = Integer.MIN_VALUE;
+		while(!stack.isEmpty()) {
+			int value = stack.pop();
+			if(value>max) {
+				max = value;
+			}
+		}
+		return max;
 	}
 }
+
