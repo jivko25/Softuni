@@ -30,7 +30,33 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.ConsumerPrint">
+    <configuration name="ConsumerPrint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Softuni.JavaAdvanced.FunctionalProgramming.ConsumerPrint" />
+      <module name="SoftuniTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Softuni.JavaAdvanced.FunctionalProgramming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DreamCar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Softuni.Softuniada2020.DreamCar" />
+      <module name="SoftuniTests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Softuni.Softuniada2020.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Softuni.JavaOOP.WorkingWithAbstraction.CardRank.Main" />
       <module name="SoftuniTests" />
@@ -64,39 +90,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Softuni.JavaOOP.WorkingWithAbstraction.CardSuit.main" />
-      <module name="SoftuniTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Softuni.JavaOOP.WorkingWithAbstraction.CardSuit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Softuni.JavaOOP.WorkingWithAbstraction.test" />
-      <module name="SoftuniTests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Softuni.JavaOOP.WorkingWithAbstraction.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsumerPrint" />
+        <item itemvalue="Application.DreamCar" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
